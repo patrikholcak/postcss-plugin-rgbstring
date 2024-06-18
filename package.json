@@ -1,0 +1,31 @@
+{
+  "name": "postcss-plugin-rgbstring",
+  "version": "1.0.0",
+  "description": "PostCSS plugin which transforms colors into individual `rrr, ggg, bbb` values for use in contextual or theme-aware colors",
+  "author": "patrikholcak <patrik@holcak.com>",
+  "license": "MIT",
+  "repository": "patrikholcak/postcss-plugin-rgbstring",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "unit": "node --test index.test.js",
+    "test": "npm run unit && eslint ."
+  },
+  "peerDependencies": {
+    "postcss": "^8"
+  },
+  "dependencies": {
+    "color": "^4.2.3"
+  },
+  "devDependencies": {
+    "eslint": "^9.5.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4"
+  }
+}
