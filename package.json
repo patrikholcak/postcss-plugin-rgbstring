@@ -1,6 +1,6 @@
 {
   "name": "postcss-plugin-rgbstring",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PostCSS plugin which transforms colors into individual `rrr, ggg, bbb` values for use in contextual or theme-aware colors",
   "author": "patrikholcak <patrik@holcak.com>",
   "license": "MIT",
