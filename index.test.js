@@ -48,7 +48,7 @@ test("transforms scss variables", async () => {
   );
 });
 
-test("transforms tailwind theme function", async () => {
+test("transforms tailwind", async () => {
   await run(
     ":root { --color: rgbstring(theme(colors.gray.500)); }",
     ":root { --color: 107, 114, 128; }",
@@ -57,6 +57,11 @@ test("transforms tailwind theme function", async () => {
   await run(
     ":root { $color: rgbstring(theme(colors.gray.500)); }",
     ":root { $color: 107, 114, 128; }",
+    withTailwind
+  );
+  await run(
+    ":root { @apply [--color:rgbstring(theme(colors.gray.500))] dark:[--bg-primary:rgbstring(theme(colors.gray.900))]; }",
+    ":root {\n    --color: 107, 114, 128\n}\n@media (prefers-color-scheme: dark) {\n    :root {\n        --bg-primary: 17, 24, 39\n    }\n}",
     withTailwind
   );
 });
